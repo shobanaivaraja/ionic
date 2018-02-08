@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button color="default" (click)='loaduser()'>View</button>
+  <div *ngFor= "let countries of data">
+   <ion-item>
+   <ion-avatar> 
+      {{countries.id}}
+      {{countries.name}}
+ </ion-avatar>  </ion-item>
+</div>
+</ion-content>
