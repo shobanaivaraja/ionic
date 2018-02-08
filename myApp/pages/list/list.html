@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div padding>
+  <ion-segment [(ngModel)]="pet">
+    <ion-segment-button value="kittens">
+      Photos
+    </ion-segment-button>
+    <ion-segment-button value="puppies">
+      Suhashini
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="pet">
+  <ion-list *ngSwitchCase="'kittens'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/imgs/DSC_1933.jpg">
+      </ion-thumbnail>
+       <h2>Suhi</h2>
+   
+      </ion-item>
+      <ion-item>
+       <ion-thumbnail item-start >
+        <img src="../assets/imgs/DSC_1959.jpg">
+      </ion-thumbnail>
+       <h2>Shobana</h2>
+   
+      </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/imgs/IMG-20170929-WA0175.jpg">
+      </ion-thumbnail>
+       <h2>shiva</h2>
+   
+     
+      </ion-item>
+<button ion-button color="light" (click)='back()'>Back</button>    
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'puppies'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/imgs/DSC_1959.jpg">
+      </ion-thumbnail>
+      <h2>Luna</h2>
+    </ion-item>
+    
+  </ion-list>
+</div>
+
+</ion-content>
